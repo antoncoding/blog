@@ -16,6 +16,7 @@ declare global {
 
 export async function getPosts() {
   if (global?.notionDatas) {
+
     const saved = global.notionDatas.savedDate
     const now = new Date()
     const diff = (now.getTime() - saved.getTime()) / 1000
@@ -32,6 +33,8 @@ export async function getPosts() {
   const collection = Object.values(response.collection)[0]?.value
   const block = response.block
   const schema = collection?.schema
+
+  console.log("response", response)
 
   const rawMetadata = block[id].value
 
