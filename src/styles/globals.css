@@ -34,7 +34,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .wrapper {
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-wrap: nowrap;
   align-items: stretch;

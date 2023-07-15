@@ -3,8 +3,8 @@ const CONFIG = {
   profile: {
     name: "Antón 安冬",
     image: "/me.jpeg",
-    role: "solidity developer",
-    bio: "Average IQ solidity dev",
+    role: "solidity dev, security research",
+    bio: "I write down thoughts as an engineer, hacker, or normal person.",
     email: "",
     linkedin: "anton-cheng-47b01010b",
     github: "antoncoding",
@@ -24,7 +24,7 @@ const CONFIG = {
   },
 
   // CONFIG configration (required)
-  link: "https://morethan-log.vercel.app",
+  link: "https://antonttc.vercel.app",
   since: "2023", // If leave this empty, current year will be used.
   lang: "zh-TW", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES', 'ko-KR']
   ogImageGenerateURL: "https://og-image-korean.vercel.app", // The link to generate OG image, don't end with a slash
