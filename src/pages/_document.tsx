@@ -23,6 +23,9 @@ class MyDocument extends Document {
             title="RSS 2.0"
             href="/feed"
           ></link>
+          <link rel="preconnect" href="https://fonts.googleapis.com"/>
+          <link rel="preconnect" href="https://fonts.gstatic.com"/>
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Noto+Sans+TC:wght@100&display=swap" rel="stylesheet"/>
           {/* theme setting */}
           <meta name="theme-color" content={"#f1f3f5"} />
 
