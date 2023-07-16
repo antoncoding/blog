@@ -10,8 +10,8 @@ import {
 const ContactCard: React.FC = () => {
   return (
     <>
-      <div className="p-1 mb-3 dark:text-white">💬 Contact</div>
-      <ul className="rounded-xl bg-white dark:bg-zinc-700 p-1 flex flex-col">
+      <ul className="rounded-xl bg-white dark:bg-zinc-700 p-2 flex flex-col">
+      <div className="text-gray-700 font-subtitle p-2 mb-1 dark:text-white text-center w-full text-base"> Contact </div>
         {CONFIG.profile.github && (
           <a
             href={`https://github.com/${CONFIG.profile.github}`}
