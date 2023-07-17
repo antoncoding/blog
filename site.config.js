@@ -3,12 +3,13 @@ const CONFIG = {
   profile: {
     name: "Antón 安冬",
     image: "/me.jpeg",
-    role: "solidity dev, security research",
-    bio: "I write down thoughts as an engineer, hacker, or normal person.",
-    email: "",
+    role: "Solidity dev, transitioning to a security expert",
+    bio: "Half about Ethereum, and half rambling about life. \n 一些隨筆還是寫中文比較隨一點",
+    email: "antonassocareer@gmail.com",
     linkedin: "",
     github: "antoncoding",
-    instagram: ""
+    instagram: "",
+    twitter: "antonttc"
   },
   projects: [
     {
