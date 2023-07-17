@@ -8,7 +8,7 @@ const CONFIG = {
     email: "",
     linkedin: "",
     github: "antoncoding",
-    instagram: "",
+    instagram: ""
   },
   projects: [
     {
@@ -59,7 +59,7 @@ const CONFIG = {
   utterances: {
     enable: true,
     config: {
-      repo: "antoncoding/personal",
+      repo: "antoncoding/blog",
       "issue-term": "og:title",
       label: "💬 Utterances",
     },
