@@ -5,6 +5,7 @@ import {
   AiOutlineGithub,
   AiOutlineMail,
   AiFillLinkedin,
+  AiOutlineTwitter
 } from "react-icons/ai"
 
 const ContactCard: React.FC = () => {
@@ -21,6 +22,17 @@ const ContactCard: React.FC = () => {
           >
             <AiOutlineGithub className="text-2xl" />
             <div className="text-sm">Github</div>
+          </a>
+        )}
+        {CONFIG.profile.twitter && (
+          <a
+            href={`https://twitter.com/${CONFIG.profile.twitter}`}
+            rel="noreferrer"
+            target="_blank"
+            className="p-3 hover:bg-gray-100 dark:hover:bg-zinc-700 rounded-xl cursor-pointer flex items-center gap-3 text-gray-500 dark:text-white hover:text-black dark:hover:text-white"
+          >
+            <AiOutlineTwitter className="text-2xl" />
+            <div className="text-sm">Twitter</div>
           </a>
         )}
         {CONFIG.profile.instagram && (
