@@ -4,7 +4,7 @@ const CONFIG = {
     name: "Antón 安冬",
     image: "/me.jpeg",
     role: "Solidity dev, transitioning to a security expert",
-    bio: "Half about Ethereum, and half rambling about life. \n 一些隨筆還是寫中文比較隨一點",
+    bio: "Half about tech, and half rambling about life. \n 一些隨筆還是寫中文比較隨一點",
     email: "antonassocareer@gmail.com",
     linkedin: "",
     github: "antoncoding",
