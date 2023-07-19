@@ -9,18 +9,18 @@ type Props = {
 const MobileProfileCard: React.FC<Props> = () => {
   return (
     <div className="block lg:hidden">
-      <div className="p-1 mb-3 dark:text-white">💻 Profile</div>
-      <div className="p-2 rounded-2xl bg-white dark:bg-zinc-700 mb-4">
-        <div className="flex items-center gap-2">
+      {/* <div className="p-1 mb-3 dark:text-white">💻 Profile</div> */}
+      <div className="p-3 pt-5 rounded-xl bg-white dark:bg-zinc-700 mb-4">
+        <div className="flex items-center gap-3">
           <Image
             src={CONFIG.profile.image}
-            width={90}
-            height={90}
+            width={120}
+            height={120}
             alt="profile_image"
             className="relative"
           />
           <div className="h-fit dark:text-white">
-            <div className=" text-xl  italic font-bold">
+            <div className=" text-xl  font-bold">
               {CONFIG.profile.name}
             </div>
             <div className="text-sm text-gray-500 mb-2 dark:text-gray-400">
