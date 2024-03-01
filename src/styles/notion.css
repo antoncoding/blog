@@ -3,6 +3,7 @@
 .notion {
   @apply text-gray-800 dark:text-gray-300;
   overflow-wrap: break-word;
+  line-height: 1.8rem;
 }
 
 .notion-quote {
