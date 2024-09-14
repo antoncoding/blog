@@ -7,7 +7,7 @@ import styled from "@emotion/styled"
 import TagList from "./TagList"
 import MobileProfileCard from "./MobileProfileCard"
 import ProfileCard from "./ProfileCard"
-import ServiceCard from "./ServiceCard"
+// import ServiceCard from "./ServiceCard"
 import ContactCard from "./ContactCard"
 import PostList from "./PostList"
 
@@ -47,7 +47,7 @@ const Feed: React.FC<Props> = () => {
         }}
       >
         <ProfileCard />
-        <ServiceCard />
+        {/* <ServiceCard /> */}
         <ContactCard />
         <div className="footer">
           <Footer />

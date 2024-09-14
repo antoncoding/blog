@@ -3,8 +3,8 @@ const CONFIG = {
   profile: {
     name: "Antón 安冬",
     image: "/me.jpeg",
-    role: "Solidity dev, transitioning to a security expert",
-    bio: "Half about tech, and half rambling about life. \n 一些隨筆還是寫中文比較隨一點",
+    role: "Average web3 dev",
+    bio: "I ramble about tech and life. \n\n 一些隨筆還是寫中文比較隨一點",
     email: "antonassocareer@gmail.com",
     linkedin: "",
     github: "antoncoding",
