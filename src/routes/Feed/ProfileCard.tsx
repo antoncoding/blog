@@ -8,9 +8,13 @@ type Props = {}
 const ProfileCard: React.FC<Props> = () => {
   return (
     <StyledWrapper>
-      <div className="title">
-        Profile
+      <div className="header-row">
+        <span className="spacer" />
+        <button className="icon-btn" aria-label="Profile actions" disabled style={{ background: 'none', border: 'none', width: 32, height: 32, opacity: 0.5, cursor: 'default' }}>
+          {/* Reserved for future icon */}
+        </button>
       </div>
+      <div className="divider" />
       <div className="content">
         <div className="top">
           <Image src={CONFIG.profile.image} fill alt="" />
@@ -28,16 +32,33 @@ const ProfileCard: React.FC<Props> = () => {
 export default ProfileCard
 
 const StyledWrapper = styled.div`
-  > .title {
-    padding: 0.25rem;
-    margin-bottom: 0.75rem;
+  .header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.25rem 0 0.75rem 0;
+  }
+  .spacer {
+    flex: 1;
+  }
+  .icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.375rem;
+  }
+  .divider {
+    border-bottom: 1px solid ${({ theme }) => theme.colors.gray6};
+    width: 100%;
   }
   > .content {
+    margin-top: 1rem;
     margin-bottom: 2.25rem;
-    border-radius: 1rem;
+    border-radius: 0.375rem;
     width: 100%;
     background-color: ${({ theme }) =>
       theme.scheme === "light" ? "white" : theme.colors.gray4};
+    padding: 1rem;
     @media (min-width: 768px) {
       padding: 1rem;
     }

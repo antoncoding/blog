@@ -17,6 +17,8 @@ type Props = {}
 
 const Feed: React.FC<Props> = () => {
   const [q, setQ] = useState("")
+  const [displayMode, setDisplayMode] = useState<'default' | 'compact'>('default')
+  const handleToggleDisplayMode = () => setDisplayMode((prev) => prev === 'default' ? 'compact' : 'default')
 
   return (
     <StyledWrapper>
@@ -30,15 +32,11 @@ const Feed: React.FC<Props> = () => {
       </div>
       <div className="mid">
         <MobileProfileCard />
-        <SearchInput value={q} onChange={(e) => setQ(e.target.value)} />
         <div className="tags">
           <TagList />
         </div>
-        <FeedHeader />
-        <PostList q={q} />
-        <div className="footer">
-          <Footer />
-        </div>
+        <FeedHeader displayMode={displayMode} onToggleDisplayMode={handleToggleDisplayMode} />
+        <PostList q={q} displayMode={displayMode} />
       </div>
       <div
         className="rt"
@@ -48,10 +46,6 @@ const Feed: React.FC<Props> = () => {
       >
         <ProfileCard />
         {/* <ServiceCard /> */}
-        <ContactCard />
-        <div className="footer">
-          <Footer />
-        </div>
       </div>
     </StyledWrapper>
   )
@@ -122,7 +116,7 @@ const StyledWrapper = styled.div`
     display: none;
     overflow: scroll;
     position: sticky;
-    top: ${HEADER_HEIGHT - 10}px;
+    top: ${HEADER_HEIGHT}px;
 
     @media (min-width: 1024px) {
       display: block;

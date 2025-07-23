@@ -9,13 +9,14 @@ import styled from "@emotion/styled"
 
 type Props = {
   data: TPost
+  displayMode: 'default' | 'compact'
 }
 
-const PostCard: React.FC<Props> = ({ data }) => {
+const PostCard: React.FC<Props> = ({ data, displayMode }) => {
   const category = (data.category && data.category?.[0]) || undefined
 
   return (
-    <StyledWrapper href={`/${data.slug}`}>
+    <StyledWrapper href={`/${data.slug}`} displayMode={displayMode}>
       <article>
         {category && (
           <div className="category">
@@ -23,30 +24,48 @@ const PostCard: React.FC<Props> = ({ data }) => {
           </div>
         )}
         {data.thumbnail && (
-          <div className="thumbnail">
+          <div
+            className="thumbnail"
+            style={{
+              borderRadius: '0.375rem',
+              overflow: 'hidden',
+              height: displayMode === 'compact' ? '220px' : undefined,
+              minHeight: displayMode === 'compact' ? '220px' : undefined,
+              maxHeight: displayMode === 'compact' ? '220px' : undefined,
+            }}
+          >
             <Image
               src={data.thumbnail}
               fill
               alt={data.title}
-              css={{ objectFit: "cover" }}
+              css={{ objectFit: 'cover' }}
             />
           </div>
         )}
-        <div data-thumb={!!data.thumbnail} data-category={!!category} className="content">
+        <div
+          data-thumb={!!data.thumbnail}
+          data-category={!!category}
+          className="content"
+          style={displayMode === 'compact' ? { padding: '0.5rem 1rem' } : {}}
+        >
           <header className="top">
-            <h2>{data.title}</h2>
+            <h2 style={displayMode === 'compact' ? { fontSize: '1rem', marginBottom: 0 } : {}}>{data.title}</h2>
           </header>
-          <div className="date">
-            <div className="content">
-              {formatDate(
-                data?.date?.start_date || data.createdTime,
-                CONFIG.lang
-              )}
-            </div>
-          </div>
-          <div className="summary">
-            <p>{data.summary}</p>
-          </div>
+          {displayMode === 'default' && (
+            <>
+              <div className="date">
+                <div className="content">
+                  {formatDate(
+                    data?.date?.start_date || data.createdTime,
+                    CONFIG.lang
+                  )}
+                </div>
+              </div>
+              <div className="summary">
+                <p>{data.summary}</p>
+              </div>
+            </>
+          )}
           <div className="tags">
             {data.tags &&
               data.tags.map((tag: string, idx: number) => (
@@ -61,12 +80,12 @@ const PostCard: React.FC<Props> = ({ data }) => {
 
 export default PostCard
 
-const StyledWrapper = styled(Link)`
+const StyledWrapper = styled(Link)<{ displayMode: 'default' | 'compact' }>`
   article {
     overflow: hidden;
     position: relative;
     margin-bottom: 1.5rem;
-    border-radius: 1rem;
+    border-radius: 0.375rem;
     background-color: ${({ theme }) =>
       theme.scheme === "light" ? "white" : theme.colors.gray4};
     transition-property: box-shadow;
@@ -87,15 +106,16 @@ const StyledWrapper = styled(Link)`
       left: 1rem;
       z-index: 10;
     }
-
     > .thumbnail {
       position: relative;
       width: 100%;
       background-color: ${({ theme }) => theme.colors.gray2};
-      padding-bottom: 66%;
-
+      padding-bottom: ${({ displayMode }) => displayMode === 'compact' ? '0' : '66%'};
+      height: ${({ displayMode }) => displayMode === 'compact' ? '220px' : 'auto'};
+      min-height: ${({ displayMode }) => displayMode === 'compact' ? '220px' : 'auto'};
+      max-height: ${({ displayMode }) => displayMode === 'compact' ? '220px' : 'none'};
       @media (min-width: 1024px) {
-        padding-bottom: 50%;
+        padding-bottom: ${({ displayMode }) => displayMode === 'compact' ? '0' : '50%'};
       }
     }
     > .content {

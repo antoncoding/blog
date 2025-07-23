@@ -6,16 +6,17 @@ import usePostsQuery from "src/hooks/usePostsQuery"
 
 type Props = {
   q: string
+  displayMode: 'default' | 'compact'
 }
 
-const PostList: React.FC<Props> = ({ q }) => {
+const PostList: React.FC<Props> = ({ q, displayMode }) => {
   const router = useRouter()
   const data = usePostsQuery()
   const [filteredPosts, setFilteredPosts] = useState(data)
 
   const currentTag = `${router.query.tag || ``}` || undefined
   const currentCategory = `${router.query.category || ``}` || DEFAULT_CATEGORY
-  const currentOrder = `${router.query.order || ``}` || "desc"
+  // const currentOrder = `${router.query.order || ``}` || "desc"
 
   useEffect(() => {
     setFilteredPosts(() => {
@@ -42,13 +43,13 @@ const PostList: React.FC<Props> = ({ q }) => {
         )
       }
       // order
-      if (currentOrder !== "desc") {
-        newFilteredPosts = newFilteredPosts.reverse()
-      }
+      // if (currentOrder !== "desc") {
+      //   newFilteredPosts = newFilteredPosts.reverse()
+      // }
 
       return newFilteredPosts
     })
-  }, [q, currentTag, currentCategory, currentOrder, setFilteredPosts])
+  }, [q, currentTag, currentCategory, setFilteredPosts])
 
   return (
     <>
@@ -57,7 +58,7 @@ const PostList: React.FC<Props> = ({ q }) => {
           <p className="text-gray-500 dark:text-gray-300">Nothing! 😺</p>
         )}
         {filteredPosts.map((post) => (
-          <PostCard key={post.id} data={post} />
+          <PostCard key={post.id} data={post} displayMode={displayMode} />
         ))}
       </div>
     </>
