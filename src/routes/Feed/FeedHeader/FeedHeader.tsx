@@ -1,5 +1,7 @@
 import React, { ComponentType } from "react"
 import styled from "@emotion/styled"
+import { MdImage, MdList } from 'react-icons/md';
+import { IconType } from 'react-icons';
 
 
 type Props = {
@@ -7,6 +9,8 @@ type Props = {
   onToggleDisplayMode: () => void
 }
 
+const ImageIcon = MdImage as IconType;
+const ListIcon = MdList as IconType;
 
 const FeedHeader: React.FC<Props> = ({ displayMode, onToggleDisplayMode }) => {
   return (
@@ -19,7 +23,7 @@ const FeedHeader: React.FC<Props> = ({ displayMode, onToggleDisplayMode }) => {
           onClick={onToggleDisplayMode}
           style={{ background: 'none', border: 'none', width: 32, height: 32, cursor: 'pointer' }}
         >
-          {displayMode === 'default' ? <div className="icon-btn-default" /> : <div className="icon-btn-compact" />}
+          {displayMode === 'default' ? <ImageIcon size={24} /> : <ListIcon size={24} />}
         </button>
       </div>
       <div className="divider" />

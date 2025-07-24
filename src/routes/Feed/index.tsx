@@ -28,13 +28,13 @@ const Feed: React.FC<Props> = () => {
           height: `calc(100vh - ${HEADER_HEIGHT}px)`,
         }}
       >
-        <TagList />
+        {/* <TagList /> */}
       </div>
       <div className="mid">
         <MobileProfileCard />
-        <div className="tags">
+        {/* <div className="tags">
           <TagList />
-        </div>
+        </div> */}
         <FeedHeader displayMode={displayMode} onToggleDisplayMode={handleToggleDisplayMode} />
         <PostList q={q} displayMode={displayMode} />
       </div>
