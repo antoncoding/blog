@@ -1,6 +1,8 @@
 import React, { ComponentType } from "react"
 import styled from "@emotion/styled"
-import { MdImage, MdList } from 'react-icons/md';
+import { MdImage, MdList, MdViewCompact } from 'react-icons/md';
+import { LuGalleryThumbnails } from "react-icons/lu";
+
 import { IconType } from 'react-icons';
 
 
@@ -23,7 +25,7 @@ const FeedHeader: React.FC<Props> = ({ displayMode, onToggleDisplayMode }) => {
           onClick={onToggleDisplayMode}
           style={{ background: 'none', border: 'none', width: 32, height: 32, cursor: 'pointer' }}
         >
-          {displayMode === 'default' ? <ImageIcon size={24} /> : <ListIcon size={24} />}
+          {displayMode === 'default' ? <MdViewCompact size={24} /> : <LuGalleryThumbnails size={24} />}
         </button>
       </div>
       <div className="divider" />
