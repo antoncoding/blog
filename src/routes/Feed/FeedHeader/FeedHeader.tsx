@@ -1,18 +1,13 @@
-import React, { ComponentType } from "react"
+import React from "react"
 import styled from "@emotion/styled"
-import { MdImage, MdList, MdViewCompact } from 'react-icons/md';
+import { MdViewCompact } from 'react-icons/md';
 import { LuGalleryThumbnails } from "react-icons/lu";
-
-import { IconType } from 'react-icons';
 
 
 type Props = {
   displayMode: 'default' | 'compact',
   onToggleDisplayMode: () => void
 }
-
-const ImageIcon = MdImage as IconType;
-const ListIcon = MdList as IconType;
 
 const FeedHeader: React.FC<Props> = ({ displayMode, onToggleDisplayMode }) => {
   return (
