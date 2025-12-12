@@ -13,7 +13,7 @@ const FeedHeader: React.FC<Props> = () => {
   return (
     <StyledWrapper>
       <h1 className="title">安安冬冬</h1>
-      <p className="tagline">筆墨之間，思與生</p>
+      <p className="tagline">言，心聲也；書，心畫也</p>
       <nav className="nav">
         <Link
           href="/"
