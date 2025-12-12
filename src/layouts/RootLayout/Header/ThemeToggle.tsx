@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 import React from "react"
-import { Emoji } from "src/components/Emoji"
+import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5"
 import useScheme from "src/hooks/useScheme"
 
 type Props = {}
@@ -14,7 +14,7 @@ const ThemeToggle: React.FC<Props> = () => {
 
   return (
     <StyledWrapper onClick={handleClick}>
-      <Emoji>{scheme === "light" ? "☀️" : "🌙"}</Emoji>
+      {scheme === "light" ? <IoSunnyOutline size={20} /> : <IoMoonOutline size={20} />}
     </StyledWrapper>
   )
 }
@@ -23,4 +23,13 @@ export default ThemeToggle
 
 const StyledWrapper = styled.div`
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${({ theme }) => theme.colors.gray11};
+  transition: color 0.2s;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.gray12};
+  }
 `

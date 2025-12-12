@@ -1,29 +1,41 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { MdViewCompact } from 'react-icons/md';
-import { LuGalleryThumbnails } from "react-icons/lu";
+import { CONFIG } from "site.config"
+import { useRouter } from "next/router"
+import Link from "next/link"
 
+type Props = {}
 
-type Props = {
-  displayMode: 'default' | 'compact',
-  onToggleDisplayMode: () => void
-}
+const FeedHeader: React.FC<Props> = () => {
+  const router = useRouter()
+  const currentFilter = router.query.filter as string | undefined
 
-const FeedHeader: React.FC<Props> = ({ displayMode, onToggleDisplayMode }) => {
   return (
     <StyledWrapper>
-      <div className="header-row">
-        <span className="spacer" />
-        <button
-          className="icon-btn"
-          aria-label="Toggle view mode"
-          onClick={onToggleDisplayMode}
-          style={{ background: 'none', border: 'none', width: 32, height: 32, cursor: 'pointer' }}
+      <h1 className="title">安安冬冬</h1>
+      <p className="tagline">筆墨之間，思與生</p>
+      <nav className="nav">
+        <Link
+          href="/"
+          className={!currentFilter ? "active" : ""}
         >
-          {displayMode === 'default' ? <MdViewCompact size={24} /> : <LuGalleryThumbnails size={24} />}
-        </button>
-      </div>
-      <div className="divider" />
+          全部
+        </Link>
+        <span className="separator">•</span>
+        <Link
+          href="/?filter=work"
+          className={currentFilter === "work" ? "active" : ""}
+        >
+          技術
+        </Link>
+        <span className="separator">•</span>
+        <Link
+          href="/?filter=life"
+          className={currentFilter === "life" ? "active" : ""}
+        >
+          生活
+        </Link>
+      </nav>
     </StyledWrapper>
   )
 }
@@ -33,24 +45,51 @@ export default FeedHeader
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
-  .header-row {
+  align-items: center;
+  margin-bottom: 3rem;
+  text-align: center;
+
+  .title {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+    color: ${({ theme }) => theme.colors.gray12};
+    letter-spacing: 0.05em;
+  }
+
+  .tagline {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: ${({ theme }) => theme.colors.gray11};
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    letter-spacing: 0.1em;
+  }
+
+  .nav {
     display: flex;
+    gap: 0.75rem;
     align-items: center;
-    justify-content: space-between;
-    padding: 0.25rem 0 0.75rem 0;
-  }
-  .spacer {
-    flex: 1;
-  }
-  .icon-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.375rem;
-  }
-  .divider {
-    border-bottom: 1px solid ${({ theme }) => theme.colors.gray6};
-    width: 100%;
+    font-size: 1rem;
+
+    a {
+      color: ${({ theme }) => theme.colors.gray11};
+      text-decoration: none;
+      transition: color 0.2s;
+
+      &:hover {
+        color: ${({ theme }) => theme.colors.gray12};
+      }
+
+      &.active {
+        color: ${({ theme }) => theme.colors.gray12};
+        font-weight: 500;
+      }
+    }
+
+    .separator {
+      color: ${({ theme }) => theme.colors.gray9};
+      font-size: 0.875rem;
+    }
   }
 `
