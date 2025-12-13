@@ -4,6 +4,7 @@ import { formatDate } from "src/libs/utils"
 import React from "react"
 import styled from "@emotion/styled"
 import Image from "next/image"
+import Tag from "src/components/Tag"
 
 type Props = {
   data: TPost
@@ -20,6 +21,13 @@ const PostHeader: React.FC<Props> = ({ data }) => {
             CONFIG.lang
           )}
         </time>
+        {data.tags && data.tags.length > 0 && (
+          <>
+            {data.tags.map((tag) => (
+              <Tag key={tag}>{tag}</Tag>
+            ))}
+          </>
+        )}
       </div>
       {data.thumbnail && (
         <div className="thumbnail">
@@ -52,8 +60,9 @@ const StyledWrapper = styled.div`
 
   .meta {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 1.5rem;
 
     .date {
