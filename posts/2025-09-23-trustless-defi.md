@@ -1,6 +1,6 @@
 ---
 title: "Why should protocols be Trustless"
-date: 2025-12-25
+date: 2025-09-23
 tags: []
 status: "Public"
 type: "Post"

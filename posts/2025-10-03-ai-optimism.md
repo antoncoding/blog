@@ -1,6 +1,6 @@
 ---
 title: "AI 雜感 - 做個樂觀主義者 "
-date: 2024-10-13
+date: 2025-10-03
 tags: []
 status: "Public"
 type: "Post"
