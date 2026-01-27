@@ -19,8 +19,8 @@ const CONFIG = {
   ],
   // blog setting (required)
   blog: {
-    title: "blog",
-    description: "安安冬冬",
+    title: "安安冬冬",
+    description: "言，心聲也；書，心畫也",
     theme: "auto", // ['light', 'dark', 'auto']
   },
 

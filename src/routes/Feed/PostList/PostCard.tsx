@@ -32,6 +32,7 @@ const StyledWrapper = styled(Link)`
   padding: 0.5rem 0;
   text-decoration: none;
   transition: opacity 0.2s;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   &:hover {
     opacity: 0.6;
@@ -42,6 +43,7 @@ const StyledWrapper = styled(Link)`
     font-size: 0.875rem;
     color: ${({ theme }) => theme.colors.gray11};
     min-width: 80px;
+    font-weight: 400;
   }
 
   .title {
@@ -50,6 +52,7 @@ const StyledWrapper = styled(Link)`
     color: ${({ theme }) => theme.colors.gray12};
     margin: 0;
     line-height: 1.6;
+    letter-spacing: 0.3px;
   }
 
   @media (max-width: 768px) {
