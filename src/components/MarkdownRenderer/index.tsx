@@ -15,16 +15,22 @@ const obsidianImageMap: Record<string, string> = {
 
 // Preprocess content to handle Obsidian image syntax
 const preprocessMarkdown = (content: string): string => {
-  // Convert ![[image.webp]] to ![image](/images/image.webp)
+  // Convert ![[image.webp]] to ![image](/attachments/image.webp)
   let processed = content.replace(/!\[\[([^\]]+)\]\]/g, (match, filename) => {
     // Check if it's in the old map first
     const mappedPath = obsidianImageMap[filename];
     
-    // Otherwise assume it's directly in public/images
-    const imagePath = mappedPath || `/images/${filename}`;
+    // Otherwise assume it's in public/attachments
+    const imagePath = mappedPath || `/attachments/${filename}`;
     const caption = filename.replace(/\.[^.]+$/, '');
     
     return `![${caption}](${imagePath})`;
+  });
+
+  // Also handle relative paths from Obsidian markdown syntax
+  // Convert ![](image.webp) to ![image](/attachments/image.webp)
+  processed = processed.replace(/!\[\]\(([^/)]+\.(?:webp|png|jpg|jpeg|gif))\)/g, (match, filename) => {
+    return `![${filename.replace(/\.[^.]+$/, '')}](/attachments/${filename})`;
   });
 
   return processed;
