@@ -1,25 +1,30 @@
 import React from "react"
 import ReactMarkdown from "react-markdown"
 import styled from "@emotion/styled"
-import PostImage from "../PostImage"
 
-// Map Obsidian images to their paths
+// Map of old organized images to public/images
 const obsidianImageMap: Record<string, string> = {
-  'yabi.webp': '/images/2026-01-11/yabi.webp',
-  'claude.webp': '/images/2026-01-11/claude.webp',
-  'ai-scientist.webp': '/images/2025-10-03/ai-scientist.webp',
-  'socrates.webp': '/images/2025-10-03/socrates.webp',
-  'blackwhole.webp': '/images/2025-07-23/blackwhole.webp',
-  'ikea-effect.webp': '/images/2025-07-23/ikea-effect.webp',
-  'etf-meme.webp': '/images/2025-10-30/etf-meme.webp'
+  'yabi.webp': '/images/yabi.webp',
+  'claude.webp': '/images/claude.webp',
+  'ai-scientist.webp': '/images/ai-scientist.webp',
+  'socrates.webp': '/images/socrates.webp',
+  'blackwhole.webp': '/images/blackwhole.webp',
+  'ikea-effect.webp': '/images/ikea-effect.webp',
+  'etf-meme.webp': '/images/etf-meme.webp'
 };
 
 // Preprocess content to handle Obsidian image syntax
 const preprocessMarkdown = (content: string): string => {
-  // Convert ![[image.webp]] to ![image](/images/path/image.webp)
+  // Convert ![[image.webp]] to ![image](/images/image.webp)
   let processed = content.replace(/!\[\[([^\]]+)\]\]/g, (match, filename) => {
-    const imagePath = obsidianImageMap[filename] || `/images/${filename}`;
-    return `![${filename.replace(/\.[^.]+$/, '')}](${imagePath})`;
+    // Check if it's in the old map first
+    const mappedPath = obsidianImageMap[filename];
+    
+    // Otherwise assume it's directly in public/images
+    const imagePath = mappedPath || `/images/${filename}`;
+    const caption = filename.replace(/\.[^.]+$/, '');
+    
+    return `![${caption}](${imagePath})`;
   });
 
   return processed;
@@ -34,19 +39,7 @@ const MarkdownRenderer: React.FC<Props> = ({ content }) => {
 
   return (
     <StyledWrapper>
-      <ReactMarkdown
-        components={{
-          img: ({ src, alt }) => {
-            return (
-              <PostImage
-                src={src || ""}
-                alt={alt || "Image"}
-                centered={true}
-              />
-            );
-          },
-        }}
-      >
+      <ReactMarkdown>
         {processedContent}
       </ReactMarkdown>
     </StyledWrapper>
@@ -139,5 +132,19 @@ const StyledWrapper = styled.div`
     :hover {
       text-decoration: underline;
     }
+  }
+
+  /* Image styling - centered and responsive */
+  img {
+    display: block;
+    margin: 2rem auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* Paragraph containing image */
+  p > img {
+    margin: 2rem auto;
   }
 `
