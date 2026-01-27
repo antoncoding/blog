@@ -18,7 +18,7 @@ I love Morpho Blue. It’s the most elegant codebase DeFi has produced. That's w
 The reason is simple: I don’t trust curators. Their incentives are misaligned with mine as a depositor, and conceptually, intermediaries are exactly what DeFi set out to eliminate. Recent discussions around xUSD, mHYPER and constant drama with Morpho vault curators makes this clear.
 
 
-[Image placeholder - please add image manually]
+![](/images/2025-10-30/etf-meme.webp)
 
 Managed vaults make sense. But it’s wrong that over 90 % of deposits now flow through them. **It’s like we built a global, peer-to-peer stock exchange, and 90 % of participants only buy ETFs**. Its looks simpler — but it kills the real market mechanism.
 
@@ -76,7 +76,7 @@ Direct allocation isn’t harder. When you supply to a lending market, you only 
 
 Managing your own assets is **fundamentally different** from managing funds for others. You don’t need a curator’s toolkit or models to average everyone’s preferences — you only need clarity on your own.When you participate directly, the road ahead is often clearer than the map drawn for you.
 
-That’s why I've been working on Monarch for so long, and also why I'm launching **Monarch Autovaults soon **— tools that let you define your own boundaries: total collateral exposure, per-market caps (the Morpho Vault V2 enables this btw), and customizable settings like whether to prioritize yield or availabillity.
+That’s why I've been working on Monarch for so long, and also why I'm launching **Monarch Autovaults**— tools that let you define your own boundaries: total collateral exposure, per-market caps (the Morpho Vault V2 enables this btw), and customizable settings like whether to prioritize yield or availabillity.
 
 It’s the exact same vault infrastructure all curators use, but you own the map.
 
