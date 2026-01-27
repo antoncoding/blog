@@ -8,7 +8,7 @@ type: "Post"
 
 > Why boring and inefficient protocols are underrated and Ethereum-aligned.
 
-*Special thanks to *[Danger](https://x.com/safetyth1rd)*, *[Simon](https://x.com/Crotts__)*, *[Indigo](https://x.com/_ndigo)*and *[Chih Chen Liang](https://x.com/ChihChengLiang)* for feedback and review. This post is also published on *[Paragraph](https://paragraph.com/@emodev/why-trustless-designs-make-defi-truely-low-risk)
+*Special thanks to *[Danger](https://x.com/safetyth1rd)*, *[Simon](https://x.com/Crotts__)*, [Indigo](https://x.com/_ndigo)and [Chih Chen Liang](https://x.com/ChihChengLiang)* for feedback and review. This post is also published on *[Paragraph](https://paragraph.com/@emodev/why-trustless-designs-make-defi-truely-low-risk)
 
 Vitalik recently published an article titled [Low-Risk DeFi Can Be for Ethereum What Search Was for Google](https://vitalik.eth.limo/general/2025/09/21/low_risk_defi.html). It's encouraging to see him acknowledging the "DeFi teams" who have focused on building this space for years.
 
