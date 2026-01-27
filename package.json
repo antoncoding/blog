@@ -39,7 +39,7 @@
     "rss": "^1.2.2"
   },
   "engines": {
-    "node": ">=22.0.0"
+    "node": ">=18.0.0"
   },
   "devDependencies": {
     "@types/gtag.js": "^0.0.12",
