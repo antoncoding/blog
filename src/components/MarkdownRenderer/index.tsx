@@ -2,7 +2,7 @@ import React from "react"
 import ReactMarkdown from "react-markdown"
 import styled from "@emotion/styled"
 
-// Preprocess content to handle Obsidian images
+// Preprocess content to handle Obsidian images and YouTube URLs
 const preprocessMarkdown = (content: string): string => {
   // Convert ![[image.webp]] to ![image](/api/image/image.webp)
   let processed = content.replace(/!\[\[([^\]]+)\]\]/g, (match, filename) => {
@@ -16,6 +16,14 @@ const preprocessMarkdown = (content: string): string => {
     const caption = filename.replace(/\.[^.]+$/, '');
     return `![${caption}](/api/image/${filename})`;
   });
+
+  // Convert bare YouTube URLs to markdown links
+  // Match both https://www.youtube.com/watch?v=ID and https://youtu.be/ID
+  processed = processed.replace(/(?<![\[\(])https:\/\/(?:www\.)?youtu(?:\.be\/|be\.com\/watch\?v=)([a-zA-Z0-9_-]{11})(?![\]\)])/g, 
+    (match, videoId) => {
+      return `[YouTube Video](https://www.youtube.com/watch?v=${videoId})`;
+    }
+  );
 
   return processed;
 };
