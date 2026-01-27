@@ -1,7 +1,7 @@
 ---
 title: "AI 雜感 - 做個樂觀主義者 "
 date: 2025-10-03
-tags: []
+tags: ["chinese", "life"]
 status: "Public"
 type: "Post"
 ---
@@ -68,7 +68,7 @@ type: "Post"
 但一樣是因為聽了蘇格拉底的故事，才讓我有了不同的想法：
 
 
-![Image](attachment:401ff7b4-9872-419f-b0d9-5d22ca49a153:image.png)
+![](attachment:401ff7b4-9872-419f-b0d9-5d22ca49a153:image.png)
 
 「出於我無法理解的理由，人們喜歡聽到世界末日來了。」 
 
