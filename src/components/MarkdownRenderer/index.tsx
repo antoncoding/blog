@@ -2,7 +2,7 @@ import React from "react"
 import ReactMarkdown from "react-markdown"
 import styled from "@emotion/styled"
 
-// Preprocess content to handle Obsidian image syntax and YouTube links
+// Preprocess content to handle Obsidian images
 const preprocessMarkdown = (content: string): string => {
   // Convert ![[image.webp]] to ![image](/api/image/image.webp)
   let processed = content.replace(/!\[\[([^\]]+)\]\]/g, (match, filename) => {
@@ -17,12 +17,6 @@ const preprocessMarkdown = (content: string): string => {
     return `![${caption}](/api/image/${filename})`;
   });
 
-  // Convert YouTube links to iframes
-  // Handle both https://www.youtube.com/watch?v=ID and https://youtu.be/ID
-  processed = processed.replace(/https:\/\/(?:www\.)?youtu(?:\.be\/|be\.com\/watch\?v=)([a-zA-Z0-9_-]{11})/g, (match, videoId) => {
-    return `<iframe width="100%" height="400" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-  });
-
   return processed;
 };
 
@@ -33,16 +27,47 @@ type Props = {
 const MarkdownRenderer: React.FC<Props> = ({ content }) => {
   const processedContent = preprocessMarkdown(content);
 
+  // Custom link component that handles YouTube links
+  const LinkComponent = ({ href, children }: any) => {
+    if (!href) return <>{children}</>;
+    
+    // Check if it's a YouTube link
+    const youtubeMatch = href.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+    
+    if (youtubeMatch) {
+      const videoId = youtubeMatch[1];
+      return <YouTubeEmbed videoId={videoId} />;
+    }
+    
+    return <a href={href}>{children}</a>;
+  };
+
   return (
     <StyledWrapper>
-      <ReactMarkdown 
-        allowDangerousHtml={true}
+      <ReactMarkdown
+        components={{
+          a: LinkComponent,
+        }}
       >
         {processedContent}
       </ReactMarkdown>
     </StyledWrapper>
   );
 };
+
+const YouTubeEmbed: React.FC<{ videoId: string }> = ({ videoId }) => (
+  <div style={{ margin: '2rem 0', display: 'flex', justifyContent: 'center' }}>
+    <iframe
+      width="100%"
+      height="400"
+      src={`https://www.youtube.com/embed/${videoId}`}
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      style={{ maxWidth: '100%', borderRadius: '8px' }}
+    />
+  </div>
+);
 
 export default MarkdownRenderer;
 
@@ -143,6 +168,7 @@ const StyledWrapper = styled.div`
     text-decoration-thickness: 1px;
     text-underline-offset: 2px;
     transition: color 0.2s ease;
+    cursor: pointer;
     
     :hover {
       color: ${({ theme }) => theme.colors.gray12};
@@ -162,14 +188,5 @@ const StyledWrapper = styled.div`
   /* Paragraph containing image */
   p > img {
     margin: 2rem auto;
-  }
-
-  /* YouTube iframe styling */
-  iframe {
-    margin: 2rem auto !important;
-    display: block !important;
-    border-radius: 8px;
-    max-width: 100%;
-    height: 400px;
   }
 `
