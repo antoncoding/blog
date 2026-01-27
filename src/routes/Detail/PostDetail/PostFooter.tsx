@@ -1,14 +1,6 @@
 import styled from "@emotion/styled"
 import { useRouter } from "next/router"
-import React from "react"
-import {
-  FacebookShareButton,
-  TwitterShareButton,
-  LinkedinShareButton,
-  FacebookIcon,
-  TwitterIcon,
-  LinkedinIcon,
-} from "react-share"
+import React, { useState } from "react"
 import { CONFIG } from "site.config"
 import usePostQuery from "src/hooks/usePostQuery"
 
@@ -17,22 +9,24 @@ type Props = {}
 const Footer: React.FC<Props> = () => {
   const router = useRouter()
   const post = usePostQuery()
+  const [copied, setCopied] = useState(false)
+
   if (!post) return null
 
   const url = `${CONFIG.link}/${post.slug}`
 
+  const copyLink = () => {
+    navigator.clipboard.writeText(url)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+
   return (
     <StyledWrapper>
-      <div className="share">
-        <TwitterShareButton url={url} title={post.title}>
-          <TwitterIcon size={32} round />
-        </TwitterShareButton>
-        <FacebookShareButton url={url} quote={post.title}>
-          <FacebookIcon size={32} round />
-        </FacebookShareButton>
-        <LinkedinShareButton url={url} title={post.title}>
-          <LinkedinIcon size={32} round />
-        </LinkedinShareButton>
+      <div className="actions">
+        <a onClick={copyLink} className="copy-link">
+          {copied ? "✓ Copied!" : "Copy Link"}
+        </a>
       </div>
       <div className="nav">
         <a onClick={() => router.push("/")}>← Back</a>
@@ -51,11 +45,22 @@ const StyledWrapper = styled.div`
   padding-top: 2rem;
   border-top: 1px solid ${({ theme }) => theme.colors.gray6};
 
-  .share {
+  .actions {
     display: flex;
-    gap: 0.5rem;
-    margin-bottom: 2rem;
     justify-content: center;
+    margin-bottom: 2rem;
+
+    .copy-link {
+      padding: 0.5rem 1rem;
+      background: ${({ theme }) => theme.colors.gray3};
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      :hover {
+        background: ${({ theme }) => theme.colors.gray4};
+      }
+    }
   }
 
   .nav {

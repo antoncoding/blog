@@ -1,7 +1,5 @@
 import React from "react"
 import ReactMarkdown from "react-markdown"
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
-import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism"
 import styled from "@emotion/styled"
 
 type Props = {
@@ -11,29 +9,7 @@ type Props = {
 const MarkdownRenderer: React.FC<Props> = ({ content }) => {
   return (
     <StyledWrapper>
-      <ReactMarkdown
-        components={{
-          code({ node, inline, className, children, ...props }: any) {
-            const match = /language-(\w+)/.exec(className || "")
-            return !inline && match ? (
-              <SyntaxHighlighter
-                style={vscDarkPlus}
-                language={match[1]}
-                PreTag="div"
-                {...props}
-              >
-                {String(children).replace(/\n$/, "")}
-              </SyntaxHighlighter>
-            ) : (
-              <code className={className} {...props}>
-                {children}
-              </code>
-            )
-          },
-        }}
-      >
-        {content}
-      </ReactMarkdown>
+      <ReactMarkdown>{content}</ReactMarkdown>
     </StyledWrapper>
   )
 }
@@ -90,9 +66,16 @@ const StyledWrapper = styled.div`
   }
 
   pre {
-    margin: 1.5rem 0;
+    background: ${({ theme }) => theme.colors.gray3};
+    padding: 1rem;
     border-radius: 8px;
     overflow-x: auto;
+    margin: 1.5rem 0;
+    
+    code {
+      background: none;
+      padding: 0;
+    }
   }
 
   table {

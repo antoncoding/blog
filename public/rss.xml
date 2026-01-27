@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[blog]]></title>
+        <description><![CDATA[安安冬冬]]></description>
+        <link>https://antonttc.vercel.app</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Tue, 27 Jan 2026 04:47:30 GMT</lastBuildDate>
+        <atom:link href="https://antonttc.vercel.app/rss.xml" rel="self" type="application/rss+xml"/>
+        <language><![CDATA[zh-TW]]></language>
+        <item>
+            <title><![CDATA[Testing Obsidian Integration]]></title>
+            <description><![CDATA[This is a sample post from Obsidian to test the integration]]></description>
+            <link>https://antonttc.vercel.app/sample-obsidian-post</link>
+            <guid isPermaLink="true">https://antonttc.vercel.app/sample-obsidian-post</guid>
+            <pubDate>Tue, 27 Jan 2026 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
