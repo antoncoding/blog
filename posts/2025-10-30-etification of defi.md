@@ -34,6 +34,8 @@ TVL can also become a marketing metric for “safety,” and safety attracts eve
 
 The xUSD drama this week — where curators trusted a 4× leveraged “stablecoin”—shows how easily “managed” risk becomes un-managed exposure. Aa @definikola pointed out, the risk curators today "chases marginal APY boosts to increase your TVL at a cost of listing risky/self-backed collateral"
 
+https://x.com/0xWismerhill/status/1983314027687096582
+
 This isn’t about bad actors. It’s structure. When managers take risk with other people’s capital, upside is private and downside is socialized. **That’s moral hazard,** the quiet engine behind every over-levered blow-up in 2008. Heads, they win; tails, depositors lose.
 
 
@@ -71,6 +73,8 @@ Vaults are useful. They batch transactions, simplify UX for beginners, and is ex
 Going back to the ETF metaphor: **we built a decentralized trading network, then told everyone not to trade**. We tell users to buy the index—to trust the fund manager.
 
 Direct allocation isn’t harder. When you supply to a lending market, you only ask: *Do I trust this collateral and this oracle? Is this APY worth it?*
+
+https://x.com/yieldsandmore/status/1983661119160860959
 
 Managing your own assets is **fundamentally different** from managing funds for others. You don’t need a curator’s toolkit or models to average everyone’s preferences — you only need clarity on your own.When you participate directly, the road ahead is often clearer than the map drawn for you.
 
