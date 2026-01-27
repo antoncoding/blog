@@ -25,6 +25,9 @@ const StyledWrapper = styled.div`
   justify-content: center;
   padding: 3rem 1rem;
   min-height: calc(100vh - 73px);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
 
   > .content {
     width: 100%;

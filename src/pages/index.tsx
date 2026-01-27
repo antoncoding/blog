@@ -8,14 +8,10 @@ import { queryKey } from "src/constants/queryKey"
 import { GetStaticProps } from "next"
 import { dehydrate } from "@tanstack/react-query"
 import { filterPosts } from "src/libs/utils/notion"
-import generateRss from "src/libs/rss/generateRss"
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPosts = await getPosts()
   const posts = filterPosts(allPosts)
-  
-  // Generate RSS during build
-  generateRss(posts)
 
   await queryClient.prefetchQuery(queryKey.posts(), () => posts)
 
