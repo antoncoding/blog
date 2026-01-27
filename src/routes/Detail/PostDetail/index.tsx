@@ -4,6 +4,7 @@ import Footer from "./PostFooter"
 import CommentBox from "./CommentBox"
 import styled from "@emotion/styled"
 import NotionRenderer from "../components/NotionRenderer"
+import MarkdownRenderer from "src/components/MarkdownRenderer"
 import usePostQuery from "src/hooks/usePostQuery"
 
 type Props = {}
@@ -13,12 +14,18 @@ const PostDetail: React.FC<Props> = () => {
 
   if (!data) return null
 
+  const isObsidian = typeof data.recordMap === "string"
+
   return (
     <StyledWrapper>
       <article>
         {data.type[0] === "Post" && <PostHeader data={data} />}
         <div className="content">
-          <NotionRenderer recordMap={data.recordMap} />
+          {isObsidian ? (
+            <MarkdownRenderer content={data.recordMap as unknown as string} />
+          ) : (
+            <NotionRenderer recordMap={data.recordMap} />
+          )}
         </div>
         {data.type[0] === "Post" && (
           <>
