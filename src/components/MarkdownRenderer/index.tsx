@@ -1,23 +1,61 @@
 import React from "react"
 import ReactMarkdown from "react-markdown"
 import styled from "@emotion/styled"
+import PostImage from "../PostImage"
+
+// Map Obsidian images to their paths
+const obsidianImageMap: Record<string, string> = {
+  'yabi.webp': '/images/2026-01-11/yabi.webp',
+  'claude.webp': '/images/2026-01-11/claude.webp',
+  'ai-scientist.webp': '/images/2025-10-03/ai-scientist.webp',
+  'socrates.webp': '/images/2025-10-03/socrates.webp',
+  'blackwhole.webp': '/images/2025-07-23/blackwhole.webp',
+  'ikea-effect.webp': '/images/2025-07-23/ikea-effect.webp',
+  'etf-meme.webp': '/images/2025-10-30/etf-meme.webp'
+};
+
+// Preprocess content to handle Obsidian image syntax
+const preprocessMarkdown = (content: string): string => {
+  // Convert ![[image.webp]] to ![image](/images/path/image.webp)
+  let processed = content.replace(/!\[\[([^\]]+)\]\]/g, (match, filename) => {
+    const imagePath = obsidianImageMap[filename] || `/images/${filename}`;
+    return `![${filename.replace(/\.[^.]+$/, '')}](${imagePath})`;
+  });
+
+  return processed;
+};
 
 type Props = {
   content: string
 }
 
 const MarkdownRenderer: React.FC<Props> = ({ content }) => {
+  const processedContent = preprocessMarkdown(content);
+
   return (
     <StyledWrapper>
-      <ReactMarkdown>{content}</ReactMarkdown>
+      <ReactMarkdown
+        components={{
+          img: ({ src, alt }) => {
+            return (
+              <PostImage
+                src={src || ""}
+                alt={alt || "Image"}
+                centered={true}
+              />
+            );
+          },
+        }}
+      >
+        {processedContent}
+      </ReactMarkdown>
     </StyledWrapper>
-  )
-}
+  );
+};
 
-export default MarkdownRenderer
+export default MarkdownRenderer;
 
 const StyledWrapper = styled.div`
-  /* Markdown styles */
   h1 {
     font-size: 2rem;
     margin: 2rem 0 1rem;
@@ -71,7 +109,7 @@ const StyledWrapper = styled.div`
     border-radius: 8px;
     overflow-x: auto;
     margin: 1.5rem 0;
-    
+
     code {
       background: none;
       padding: 0;
@@ -93,12 +131,6 @@ const StyledWrapper = styled.div`
   th {
     background: ${({ theme }) => theme.colors.gray3};
     font-weight: 600;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-    margin: 1.5rem 0;
   }
 
   a {
