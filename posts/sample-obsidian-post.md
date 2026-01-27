@@ -1,6 +1,6 @@
 ---
 title: "Testing Obsidian Integration"
-date: 2026-01-27
+date: 2020-01-01
 tags: ["test", "obsidian"]
 category: ["Tech"]
 summary: "This is a sample post from Obsidian to test the integration"

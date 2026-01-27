@@ -4,15 +4,105 @@
         <description><![CDATA[安安冬冬]]></description>
         <link>https://antonttc.vercel.app</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 27 Jan 2026 04:54:19 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 27 Jan 2026 05:05:57 GMT</lastBuildDate>
         <atom:link href="https://antonttc.vercel.app/rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[zh-TW]]></language>
+        <item>
+            <title><![CDATA[我的 Vibe Coding 心得]]></title>
+            <description><![CDATA[2025 Vibe coder 心得]]></description>
+            <link>https://antonttc.vercel.app/vibe-coding-2025</link>
+            <guid isPermaLink="true">https://antonttc.vercel.app/vibe-coding-2025</guid>
+            <pubDate>Sun, 11 Jan 2026 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The ETF-ification of DeFi]]></title>
+            <description><![CDATA[Why risk curation is not the future.]]></description>
+            <link>https://antonttc.vercel.app/etification of defi</link>
+            <guid isPermaLink="true">https://antonttc.vercel.app/etification of defi</guid>
+            <pubDate>Thu, 30 Oct 2025 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[AI 雜感 - 做個樂觀主義者 ]]></title>
+            <description><![CDATA[從 ChatGPT 問世以來，一些對於 AI 感想的總結]]></description>
+            <link>https://antonttc.vercel.app/my-ai-optimism</link>
+            <guid isPermaLink="true">https://antonttc.vercel.app/my-ai-optimism</guid>
+            <pubDate>Fri, 03 Oct 2025 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Why Trustless Designs Make DeFi Truely Low-Risk]]></title>
+            <description><![CDATA[Why boring and inefficient protocols are underrated and Ethereum-aligned.]]></description>
+            <link>https://antonttc.vercel.app/trustless-defi</link>
+            <guid isPermaLink="true">https://antonttc.vercel.app/trustless-defi</guid>
+            <pubDate>Tue, 23 Sep 2025 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[語言的甜蜜點]]></title>
+            <link>https://antonttc.vercel.app/the-sweet-spot</link>
+            <guid isPermaLink="true">https://antonttc.vercel.app/the-sweet-spot</guid>
+            <pubDate>Wed, 23 Jul 2025 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Morpho or Euler? Comparing lending hyperstructures]]></title>
+            <description><![CDATA[How to choose between Morpho and Euler?]]></description>
+            <link>https://antonttc.vercel.app/morpho-vs-euler</link>
+            <guid isPermaLink="true">https://antonttc.vercel.app/morpho-vs-euler</guid>
+            <pubDate>Tue, 03 Dec 2024 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[我的人生頓悟（二）：智慧的難能可貴]]></title>
+            <description><![CDATA[什麼時候努力什麼時候放下]]></description>
+            <link>https://antonttc.vercel.app/wisdom</link>
+            <guid isPermaLink="true">https://antonttc.vercel.app/wisdom</guid>
+            <pubDate>Mon, 13 May 2024 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[我眼中的 Julian Assange ]]></title>
+            <description><![CDATA[從間諜法到言論自由、從媒體人到賽博龐克：我眼中的 Julian Assange]]></description>
+            <link>https://antonttc.vercel.app/julian-assange</link>
+            <guid isPermaLink="true">https://antonttc.vercel.app/julian-assange</guid>
+            <pubDate>Wed, 28 Feb 2024 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[我的人生頓悟（一）：犧牲的意義]]></title>
+            <description><![CDATA[理想究竟真的是理想、還是被拿來犧牲別人的藉口]]></description>
+            <link>https://antonttc.vercel.app/sacrifice</link>
+            <guid isPermaLink="true">https://antonttc.vercel.app/sacrifice</guid>
+            <pubDate>Tue, 31 Oct 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[關於正義與邪惡]]></title>
+            <description><![CDATA[跳脫 DeFi MaXi 同溫層的一次對話心得]]></description>
+            <link>https://antonttc.vercel.app/what-is-real-justice-in-defi</link>
+            <guid isPermaLink="true">https://antonttc.vercel.app/what-is-real-justice-in-defi</guid>
+            <pubDate>Sat, 16 Sep 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[生也有涯、知也無涯]]></title>
+            <description><![CDATA[如果有一個能同步所有人類大腦知識的芯片，該不該支持這項技術？]]></description>
+            <link>https://antonttc.vercel.app/knowledge</link>
+            <guid isPermaLink="true">https://antonttc.vercel.app/knowledge</guid>
+            <pubDate>Fri, 04 Aug 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[生氣的蛋]]></title>
+            <description><![CDATA[生氣的蛋，到生氣的人]]></description>
+            <link>https://antonttc.vercel.app/huevos-cabreados</link>
+            <guid isPermaLink="true">https://antonttc.vercel.app/huevos-cabreados</guid>
+            <pubDate>Fri, 16 Jun 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Premia Contract Review]]></title>
+            <description><![CDATA[Premia smart contract review and notes]]></description>
+            <link>https://antonttc.vercel.app/premia-review</link>
+            <guid isPermaLink="true">https://antonttc.vercel.app/premia-review</guid>
+            <pubDate>Wed, 13 Apr 2022 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Testing Obsidian Integration]]></title>
             <description><![CDATA[This is a sample post from Obsidian to test the integration]]></description>
             <link>https://antonttc.vercel.app/sample-obsidian-post</link>
             <guid isPermaLink="true">https://antonttc.vercel.app/sample-obsidian-post</guid>
-            <pubDate>Tue, 27 Jan 2026 00:00:00 GMT</pubDate>
+            <pubDate>Wed, 01 Jan 2020 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
