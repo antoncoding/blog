@@ -36,4 +36,5 @@ yarn-error.log*
 # public/robots.txt
 # public/sitemap.xml
 
-/.firebase
+/.firebase.obsidian/
+.obsidian/

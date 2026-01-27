@@ -6,6 +6,7 @@ type Props = {}
 
 const Footer: React.FC<Props> = () => {
   const router = useRouter()
+
   return (
     <StyledWrapper>
       <a onClick={() => router.push("/")}>← Back</a>
@@ -21,12 +22,14 @@ export default Footer
 const StyledWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid ${({ theme }) => theme.colors.gray6};
   font-weight: 500;
   color: ${({ theme }) => theme.colors.gray10};
+  
   a {
-    margin-top: 0.5rem;
     cursor: pointer;
-
     :hover {
       color: ${({ theme }) => theme.colors.gray12};
     }

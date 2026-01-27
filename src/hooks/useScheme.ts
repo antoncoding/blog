@@ -13,6 +13,7 @@ const useScheme = (): [Scheme, SetScheme] => {
     queryKey: queryKey.scheme(),
     enabled: false,
     initialData: "light",
+    staleTime: Infinity,
   })
 
   const scheme = data === "light" ? "light" : "dark"
@@ -28,6 +29,7 @@ const useScheme = (): [Scheme, SetScheme] => {
 
     const scheme = getCookie("scheme")
     setScheme(scheme === "light" ? "light" : "dark")
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return [scheme, setScheme]

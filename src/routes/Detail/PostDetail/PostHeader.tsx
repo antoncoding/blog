@@ -1,7 +1,7 @@
 import { CONFIG } from "site.config"
 import { TPost } from "src/types"
 import { formatDate } from "src/libs/utils"
-import React from "react"
+import React, { useState } from "react"
 import styled from "@emotion/styled"
 import Image from "next/image"
 import Tag from "src/components/Tag"
@@ -11,8 +11,20 @@ type Props = {
 }
 
 const PostHeader: React.FC<Props> = ({ data }) => {
+  const [copied, setCopied] = useState(false)
+  
+  const copyLink = () => {
+    const url = `${CONFIG.link}/${data.slug}`
+    navigator.clipboard.writeText(url)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+
   return (
     <StyledWrapper>
+      <button className="share-btn" onClick={copyLink}>
+        {copied ? "✓ copied" : "share"}
+      </button>
       <h1 className="title">{data.title}</h1>
       <div className="meta">
         <time className="date">
@@ -46,9 +58,29 @@ const PostHeader: React.FC<Props> = ({ data }) => {
 export default PostHeader
 
 const StyledWrapper = styled.div`
+  position: relative;
   margin-bottom: 2rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid ${({ theme }) => theme.colors.gray6};
+
+  .share-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.25rem 0.75rem;
+    background: transparent;
+    border: 1px solid ${({ theme }) => theme.colors.gray6};
+    border-radius: 4px;
+    color: ${({ theme }) => theme.colors.gray11};
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    :hover {
+      border-color: ${({ theme }) => theme.colors.gray8};
+      color: ${({ theme }) => theme.colors.gray12};
+    }
+  }
 
   .title {
     font-size: 1.75rem;
@@ -56,6 +88,7 @@ const StyledWrapper = styled.div`
     font-weight: 400;
     color: ${({ theme }) => theme.colors.gray12};
     margin-bottom: 1rem;
+    padding-right: 5rem; /* Space for share button */
   }
 
   .meta {
