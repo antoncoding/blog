@@ -30,7 +30,7 @@ const preprocessMarkdown = (content: string): string => {
   // Also handle relative paths from Obsidian markdown syntax
   // Convert ![](image.webp) to ![image](/attachments/image.webp)
   processed = processed.replace(/!\[\]\(([^/)]+\.(?:webp|png|jpg|jpeg|gif))\)/g, (match, filename) => {
-    return `![${filename.replace(/\.[^.]+$/, '')}](/attachments/${filename})`;
+    return `![${filename.replace(/\.[^.]+$/, '')}](/public/attachments/${filename})`;
   });
 
   return processed;
