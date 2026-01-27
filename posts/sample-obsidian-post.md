@@ -14,10 +14,10 @@ This is a sample post created to demonstrate that the blog can now pull content 
 
 ## Features Working
 
-- ✅ Markdown rendering
-- ✅ Frontmatter parsing  
-- ✅ Date sorting
-- ✅ Tag support
+- Markdown rendering
+- Frontmatter parsing  
+- Date sorting
+- Tag support
 
 ## Code Example
 
