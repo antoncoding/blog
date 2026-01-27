@@ -13,6 +13,7 @@ const useScheme = (): [Scheme, SetScheme] => {
     queryKey: queryKey.scheme(),
     enabled: false,
     initialData: "light",
+    staleTime: Infinity,
   })
 
   const scheme = data === "light" ? "light" : "dark"

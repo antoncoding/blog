@@ -2,7 +2,7 @@ import React from "react"
 import ReactMarkdown from "react-markdown"
 import styled from "@emotion/styled"
 
-// Preprocess content to handle Obsidian image syntax
+// Preprocess content to handle Obsidian image syntax and YouTube links
 const preprocessMarkdown = (content: string): string => {
   // Convert ![[image.webp]] to ![image](/api/image/image.webp)
   let processed = content.replace(/!\[\[([^\]]+)\]\]/g, (match, filename) => {
@@ -15,6 +15,12 @@ const preprocessMarkdown = (content: string): string => {
   processed = processed.replace(/!\[\]\(([^/)]+\.(?:webp|png|jpg|jpeg|gif))\)/g, (match, filename) => {
     const caption = filename.replace(/\.[^.]+$/, '');
     return `![${caption}](/api/image/${filename})`;
+  });
+
+  // Convert YouTube links to iframes
+  // Handle both https://www.youtube.com/watch?v=ID and https://youtu.be/ID
+  processed = processed.replace(/https:\/\/(?:www\.)?youtu(?:\.be\/|be\.com\/watch\?v=)([a-zA-Z0-9_-]{11})/g, (match, videoId) => {
+    return `<iframe width="100%" height="400" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
   });
 
   return processed;
@@ -39,6 +45,8 @@ const MarkdownRenderer: React.FC<Props> = ({ content }) => {
 export default MarkdownRenderer;
 
 const StyledWrapper = styled.div`
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
   h1 {
     font-size: 2rem;
     margin: 2rem 0 1rem;
@@ -60,6 +68,9 @@ const StyledWrapper = styled.div`
   p {
     margin: 1rem 0;
     line-height: 1.7;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
   }
 
   ul, ol {
@@ -116,11 +127,18 @@ const StyledWrapper = styled.div`
     font-weight: 600;
   }
 
+  /* Subtle links */
   a {
-    color: ${({ theme }) => theme.colors.blue11};
-    text-decoration: none;
+    color: ${({ theme }) => theme.colors.gray10};
+    text-decoration: underline;
+    text-decoration-color: ${({ theme }) => theme.colors.gray5};
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: color 0.2s ease;
+    
     :hover {
-      text-decoration: underline;
+      color: ${({ theme }) => theme.colors.gray12};
+      text-decoration-color: ${({ theme }) => theme.colors.gray8};
     }
   }
 
@@ -136,5 +154,13 @@ const StyledWrapper = styled.div`
   /* Paragraph containing image */
   p > img {
     margin: 2rem auto;
+  }
+
+  /* YouTube iframe styling */
+  iframe {
+    margin: 2rem auto;
+    display: block;
+    border-radius: 8px;
+    max-width: 100%;
   }
 `
