@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react"
 import ReactMarkdown from "react-markdown"
 import styled from "@emotion/styled"
+import { useTheme } from "@emotion/react"
 
 // Preprocess content to handle Obsidian images, YouTube URLs, and X/Twitter URLs
 const preprocessMarkdown = (content: string): string => {
@@ -96,6 +97,8 @@ const YouTubeEmbed: React.FC<{ videoId: string }> = ({ videoId }) => (
 
 const TweetEmbed: React.FC<{ tweetId: string }> = ({ tweetId }) => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const theme = useTheme() as any;
+  const twitterTheme = theme?.scheme === 'light' ? 'light' : 'dark';
 
   useEffect(() => {
     const renderTweet = () => {
@@ -104,6 +107,7 @@ const TweetEmbed: React.FC<{ tweetId: string }> = ({ tweetId }) => {
         (window as any).twttr.widgets.createTweet(tweetId, containerRef.current, {
           align: 'center',
           conversation: 'none',
+          theme: twitterTheme,
         });
       }
     };
@@ -117,7 +121,7 @@ const TweetEmbed: React.FC<{ tweetId: string }> = ({ tweetId }) => {
       script.onload = renderTweet;
       document.body.appendChild(script);
     }
-  }, [tweetId]);
+  }, [tweetId, twitterTheme]);
 
   return (
     <div style={{ margin: '2rem 0', display: 'flex', justifyContent: 'center' }}>
