@@ -55,10 +55,11 @@ const MarkdownRenderer: React.FC<Props> = ({ content }) => {
       return <YouTubeEmbed videoId={videoId} />;
     }
 
-    // Check if it's an X/Twitter link
+    // Check if it's an X/Twitter embed (only for auto-generated links from bare URLs)
     const tweetMatch = href.match(/(?:twitter\.com|x\.com)\/\w+\/status\/(\d+)/);
+    const childText = typeof children === 'string' ? children : Array.isArray(children) ? children[0] : '';
 
-    if (tweetMatch) {
+    if (tweetMatch && childText === 'Tweet') {
       const tweetId = tweetMatch[1];
       return <TweetEmbed tweetId={tweetId} />;
     }
