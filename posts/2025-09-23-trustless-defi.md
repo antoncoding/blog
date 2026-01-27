@@ -6,10 +6,6 @@ status: "Public"
 type: "Post"
 ---
 
-# Why Trustless Designs Make DeFi Truely Low-Risk
-
-## **Why Trustless Design Makes DeFi Truly Low-Risk**
-
 > Why boring and inefficient protocols are underrated and Ethereum-aligned.
 
 *Special thanks to *[Danger](https://x.com/safetyth1rd)*, *[Simon](https://x.com/Crotts__)*, *[Indigo](https://x.com/_ndigo)*and *[Chih Chen Liang](https://x.com/ChihChengLiang)* for feedback and review. This post is also published on *[Paragraph](https://paragraph.com/@emodev/why-trustless-designs-make-defi-truely-low-risk)

@@ -5,20 +5,23 @@ tags: ["life", "chinese"]
 status: "Public"
 type: "Post"
 ---
+![](Pasted%20image%2020260127151420.png)
 
-# 生氣的蛋
+> 上個月回西班牙吃了久違的 Huevos Cabreados，真的是差點忘記它的美味。於是就來借題發揮，記錄美食的同時，抒發一些思考已久的問題吧
+
 
 ## 生氣的蛋
 
 如題，西班牙有一道著名的小吃（Tapas），名叫 Huevos cabreados: Huevos 就是雞蛋，cabreados 則有生氣、不安、被冒犯了等意思，所以要直接翻譯這道菜，就變成**生氣的蛋**了。這道菜的組成很簡單，就是馬鈴薯（薯條）加上蛋，但精髓是配上比較辣的元素，例如辣醬或是辣的臘腸。做好後熱騰騰的上桌，要趕緊把所有東西拌在一起，我遇過不少服務員也會在端上來之後幫你把蛋馬上切開，跟下面的薯條扮在一起，深怕我們觀光客破壞這道美食。
 
-
-![上網找一張跟縮圖不一樣的Huevos Cabreados](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/39d1e3b0-e48b-408c-b655-2994450c6acc/Screenshot_2023-07-17_at_12.07.10.png)
+![](Pasted%20image%2020260127151449.png)
+> 上網找一張跟縮圖不一樣的Huevos Cabreados
 
 另一道有名的菜叫做 Huevos Estrellados (o Huevos Rotos)，是碎蛋的意思。主成分也是炸馬鈴薯加蛋，但要說區別的話，就是沒有強調那個辣味，而大部分是加上生火腿和橄欖油、胡椒等等。如果上網搜尋的話，大多會找到這種比較強調生火腿的照片。
 
+![](Pasted%20image%2020260127151507.png)
+> Huevos Rotos
 
-![Huevos Rotos](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/239596bf-99db-4fd3-8bb1-e94d53173cc0/Untitled.png)
 
 根據 ChatGPT 的說法，其實大部分的西班牙人不會把這兩道菜分那麼清楚：因為其實他們之間的界線是很模糊的，現在基本上只要是有蛋，有馬鈴薯，中間有加點什麼有肉味的醬汁，要叫什麼都可以。所以真的去餐廳的時候，最好是看看菜單上的成分來判斷是哪個派系：如果是想吃**生氣的蛋**，就要看那些加臘腸跟辣椒醬的。我猜，這應該就像台灣的「米糕」之類的，大家心中對於這個詞都有自己的定義，對於是誰抄誰、哪個才是真正的做法，或許沒有絕對。
 

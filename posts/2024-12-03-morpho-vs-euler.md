@@ -6,8 +6,6 @@ status: "Public"
 type: "Post"
 ---
 
-# Morpho or Euler? Comparing lending hyperstructures
-
 ## **A High-Level Comparison of Euler and Morpho**
 
 this post is also published on [Paragraph.](https://paragraph.com/@emodev/morpho-or-euler-comparing-lending-hyperstructures)

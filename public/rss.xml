@@ -4,15 +4,14 @@
         <description><![CDATA[安安冬冬]]></description>
         <link>https://antonttc.vercel.app</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 27 Jan 2026 06:55:58 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 27 Jan 2026 07:15:32 GMT</lastBuildDate>
         <atom:link href="https://antonttc.vercel.app/rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[zh-TW]]></language>
         <item>
             <title><![CDATA[我的 Vibe Coding 心得]]></title>
             <description><![CDATA[
-# 我的 Vibe Coding 心得
 
-今天晚餐又跟兩位高中同學約吃 Yabi。自從 2022 年底被佳季推坑之後，Yabi 一直是我心目中的聚餐好去處。可惜今天招牌拉餅賣完了，算是有點美中不足。]]></description>
+今天晚餐又跟兩位高中同學約吃 Yabi。自從 2022 年底被佳季推坑之後，Yabi 一直是我心目中的聚餐好去處。可惜今天招牌拉餅賣完了，算是有點美中不足。運氣不錯是今天坐在靠窗的位子，看著窗外熙]]></description>
             <link>https://antonttc.vercel.app/2026-01-11-vibe-coding-2025</link>
             <guid isPermaLink="true">https://antonttc.vercel.app/2026-01-11-vibe-coding-2025</guid>
             <pubDate>Sun, 11 Jan 2026 00:00:00 GMT</pubDate>
@@ -30,13 +29,12 @@ This article is also published on [Paragraph](https://paragraph.com/@e]]></descr
         <item>
             <title><![CDATA[AI 雜感 - 做個樂觀主義者 ]]></title>
             <description><![CDATA[
-# AI 雜感 - 做個樂觀主義者 
 
 ### 前言
 
 翻開自己未寫完的文章草稿夾，發現剛好一年前也正想要寫一篇關於 AI 的文章，突然覺得時光飛逝，日子又過得更快些了。
 
-這幾天我突然意識到：從 ]]></description>
+這幾天我突然意識到：從 ChatGPT 問世以來，幾乎跟所有人]]></description>
             <link>https://antonttc.vercel.app/2025-10-03-my-ai-optimism</link>
             <guid isPermaLink="true">https://antonttc.vercel.app/2025-10-03-my-ai-optimism</guid>
             <pubDate>Fri, 03 Oct 2025 00:00:00 GMT</pubDate>
@@ -44,21 +42,18 @@ This article is also published on [Paragraph](https://paragraph.com/@e]]></descr
         <item>
             <title><![CDATA[Why Trustless Designs Make DeFi Truely Low-Risk]]></title>
             <description><![CDATA[
-# Why Trustless Designs Make DeFi Truely Low-Risk
+> Why boring and inefficient protocols are underrated and Ethereum-aligned.
 
-## **Why Trustless Design Makes DeFi Truly Low-R]]></description>
+*Special thanks to *[D]]></description>
             <link>https://antonttc.vercel.app/2025-09-23-trustless-defi</link>
             <guid isPermaLink="true">https://antonttc.vercel.app/2025-09-23-trustless-defi</guid>
             <pubDate>Tue, 23 Sep 2025 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[語言的甜蜜點]]></title>
-            <description><![CDATA[
-# 語言的甜蜜點
+            <description><![CDATA[## 聰明的朋友
 
-## 聰明的朋友
-
-我有個朋友叫陳品，是個我十分佩服的人。在一些人眼中他是創業家或小老闆，我卻最佩服他對人心、社會等等事情的觀察能力。他總是能夠用自己很特別的觀點，既跳脫、又有邏]]></description>
+我有個朋友叫陳品，是個我十分佩服的人。在一些人眼中他是創業家或小老闆，我卻最佩服他對人心、社會等等事情的觀察能力。他總是能夠用自己很特別的觀點，既跳脫、又有邏輯的總結出特別的結論，]]></description>
             <link>https://antonttc.vercel.app/2025-07-23-the-sweet-spot</link>
             <guid isPermaLink="true">https://antonttc.vercel.app/2025-07-23-the-sweet-spot</guid>
             <pubDate>Wed, 23 Jul 2025 00:00:00 GMT</pubDate>
@@ -66,9 +61,9 @@ This article is also published on [Paragraph](https://paragraph.com/@e]]></descr
         <item>
             <title><![CDATA[Morpho or Euler? Comparing lending hyperstructures]]></title>
             <description><![CDATA[
-# Morpho or Euler? Comparing lending hyperstructures
+## **A High-Level Comparison of Euler and Morpho**
 
-## **A High-Level Comparison of Euler and Mor]]></description>
+this post is also published on [Paragraph.](htt]]></description>
             <link>https://antonttc.vercel.app/2024-12-03-morpho-vs-euler</link>
             <guid isPermaLink="true">https://antonttc.vercel.app/2024-12-03-morpho-vs-euler</guid>
             <pubDate>Tue, 03 Dec 2024 00:00:00 GMT</pubDate>
@@ -76,52 +71,46 @@ This article is also published on [Paragraph](https://paragraph.com/@e]]></descr
         <item>
             <title><![CDATA[我的人生頓悟（二）：智慧的難能可貴]]></title>
             <description><![CDATA[
-# 我的人生頓悟（二）：智慧的難能可貴
 
-![[Pasted image 20260127141548.png]]
+![](Pasted%20image%2020260127150538.png)
 
-
-> _上帝啊！懇求你 賜我恩典，安詳接受不能改的事件； 鼓我義念，勇敢改變可以]]></description>
+> _上帝啊！懇求你 賜我恩典，安詳接受不能改的事件； 鼓我義念，勇敢改變可以改的事件；_ _**贈我智慧，能夠]]></description>
             <link>https://antonttc.vercel.app/2024-05-13-wisdom</link>
             <guid isPermaLink="true">https://antonttc.vercel.app/2024-05-13-wisdom</guid>
             <pubDate>Mon, 13 May 2024 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[我眼中的 Julian Assange ]]></title>
-            <description><![CDATA[
-# 我眼中的 Julian Assange 
+            <description><![CDATA[![](Pasted%20image%2020260127150640.png)
+
 
 ## 前言
 
-維基解密（Wikileaks），長久以來在我腦中都是一個像都市傳說一樣的存在，好像知道有那麼回事，卻也不清楚究竟發生了什麼。
-
-阿桑奇（]]></description>
+維基解密（Wikileaks），長久以來在我腦中都是一個像都市傳說一樣的存在，好像知道有那麼回事，卻]]></description>
             <link>https://antonttc.vercel.app/2024-02-28-julian-assange</link>
             <guid isPermaLink="true">https://antonttc.vercel.app/2024-02-28-julian-assange</guid>
             <pubDate>Wed, 28 Feb 2024 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[我的人生頓悟（一）：犧牲的意義]]></title>
-            <description><![CDATA[
-# 我的人生頓悟（一）：犧牲的意義
+            <description><![CDATA[![](Pasted%20image%2020260127151037.png)
 
 ### 人生體悟系列前言
 
-這幾年，我開始發現我好像真正開始能從別人的話裡「領悟」到一些東西。這講的通常不是知識上的學會或聽懂，而是有點哲學層的東西。聽起來很深]]></description>
+這幾年，我開始發現我好像真正開始能從別人的話裡「領悟」到一些東西。這講的通常不是知識上的]]></description>
             <link>https://antonttc.vercel.app/2023-10-31-sacrifice</link>
             <guid isPermaLink="true">https://antonttc.vercel.app/2023-10-31-sacrifice</guid>
             <pubDate>Tue, 31 Oct 2023 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[關於正義與邪惡]]></title>
-            <description><![CDATA[
-# 關於正義與邪惡
+            <description><![CDATA[![](Pasted%20image%2020260127151248.png)
 
 ### 又到了我的胡思亂想時間
 
 分享一下這禮拜來新加坡，遇到最發人深省的談話之一。
 
-M 先生曾是某個大的造市商系統化交易頭頭，就連視訊鏡頭前的穿著打扮，都像是電影裡面華爾街]]></description>
+M 先生曾是某個大的造市商系]]></description>
             <link>https://antonttc.vercel.app/2023-09-16-what-is-real-justice-in-defi</link>
             <guid isPermaLink="true">https://antonttc.vercel.app/2023-09-16-what-is-real-justice-in-defi</guid>
             <pubDate>Sat, 16 Sep 2023 00:00:00 GMT</pubDate>
@@ -129,23 +118,20 @@ M 先生曾是某個大的造市商系統化交易頭頭，就連視訊鏡頭前
         <item>
             <title><![CDATA[生也有涯、知也無涯]]></title>
             <description><![CDATA[
-# 生也有涯、知也無涯
-
 看了中國的一個辯論節目叫奇葩說，有一集在辯論「如果有一個能同步人類所有知識的芯片，該不該支持？」
 
-沒想到支持方最後能贏。在我看來支持方所有觀點都建立在一個虛假的前提，就是]]></description>
+https://www.youtube.com/watch?v=YGsdziZQM0E
+
+沒想到支]]></description>
             <link>https://antonttc.vercel.app/2023-08-04-knowledge</link>
             <guid isPermaLink="true">https://antonttc.vercel.app/2023-08-04-knowledge</guid>
             <pubDate>Fri, 04 Aug 2023 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[生氣的蛋]]></title>
-            <description><![CDATA[
-# 生氣的蛋
+            <description><![CDATA[![](Pasted%20image%2020260127151420.png)
 
-## 生氣的蛋
-
-如題，西班牙有一道著名的小吃（Tapas），名叫 Huevos cabreados: Huevos 就是雞蛋，cabreados 則有生氣、不安、被冒犯了等意思，所]]></description>
+> 上個月回西班牙吃了久違的 Huevos Cabreados，真的是差點忘記它的美味。於是就來借題發揮，記錄美食的]]></description>
             <link>https://antonttc.vercel.app/2023-06-16-huevos-cabreados</link>
             <guid isPermaLink="true">https://antonttc.vercel.app/2023-06-16-huevos-cabreados</guid>
             <pubDate>Fri, 16 Jun 2023 00:00:00 GMT</pubDate>

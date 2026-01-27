@@ -5,8 +5,8 @@ tags: ["life", "chinese"]
 status: "Public"
 type: "Post"
 ---
+![](Pasted%20image%2020260127150640.png)
 
-# 我眼中的 Julian Assange 
 
 ## 前言
 
@@ -22,10 +22,10 @@ type: "Post"
 
 
 
-#### 前情提要：維基解密與電報門事件
+### 前情提要：維基解密與電報門事件
 
 
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/cf435e4b-b057-409f-b155-2521ad96f179/397c9064-a49f-4da1-8b29-25bb8e1261dc/Untitled.png)
+![](Pasted%20image%2020260127150715.png)
 
 維基解密（WikiLeaks），直白點講就是一個爆料網站，它讓任何人可以在上面向編輯團隊分享機密文件，不用擔心自己的身份被揭露，接著再由這些編輯審核過後，以維基解密為平台發表這些匿名爆料。在 Cypherpunk 一書中，阿桑奇這樣形容維基解密的核心理念：
 
@@ -65,8 +65,7 @@ type: "Post"
 
 大部分支持阿桑奇一派的主要論點也圍繞在「媒體自由」這點。如果今天英國同意了引渡程序，使得阿桑奇被引渡、甚至判刑，那麼不只美國，全世界的記者都要瑟瑟發抖：因為一但你寫的新聞可能被美國政府判定為「披露國防資訊」，你就有可能被引渡到美國受審。這讓全世界的新聞自由都倒退了，許多人是這樣解讀的，同時也是非常強而有力的論點。
 
-
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/cf435e4b-b057-409f-b155-2521ad96f179/95166b1c-d725-4c38-81ce-ffe31b46fc87/Untitled.png)
+![](Pasted%20image%2020260127150825.png)
 
 我一開始接觸到的大部分的論點，也都是以這樣的脈絡來敘述整件事情：**媒體有自由，沒有人應該因為揭露惡行而被處罰。**
 
@@ -87,8 +86,8 @@ type: "Post"
 
 用這個角度想想，又好像沒那麼樂觀了。應該說，好像可以想像一些人會同意用「愛國精神」還有「大政府」的觀點，來覆蓋所謂的基本人權。
 
-
-![雖然阿桑奇不是間諜，但講到間諜就很想放 Spy Family 的圖片](https://prod-files-secure.s3.us-west-2.amazonaws.com/cf435e4b-b057-409f-b155-2521ad96f179/74662891-f033-4bdf-9c4b-c2af83a1ba56/Untitled.png)
+![](Pasted%20image%2020260127150734.png)
+> 雖然阿桑奇不是間諜，但講到間諜就很想放 Spy Family 的圖片
 
 
 ## 案件的現況與 我的想法
@@ -117,7 +116,9 @@ type: "Post"
 
 如過不違法，那麼也不用談什麼引不引渡，因為阿桑奇根本就不該被起訴。這是許多美國國內媒體專注的方向，也是更多人討論的點，畢竟一石二鳥，只要美國政府撤告，一切就結束了。
 
-在過去的判例中，最終大法官都站在人民這一邊，如上所述，媒體基本上還是擁有這一張免死金牌，但這張免死金牌存在有其理由。這部分，我最喜歡下面這篇社論的見解。下面擷取結論加上翻譯的段落中，作者說了為什麼儘管他很討厭阿桑奇的意識形態，卻仍必需要用「憲法保障言論自由」的尺度來看待這件事情：
+在過去的判例中，最終大法官都站在人民這一邊，如上所述，媒體基本上還是擁有這一張免死金牌，但這張免死金牌存在有其理由。這部分，我最喜歡下面[這篇社論](https://www.nytimes.com/2024/02/19/opinion/julian-assange-extradition-espionage.html)的見解。下面擷取結論加上翻譯的段落中，作者說了為什麼儘管他很討厭阿桑奇的意識形態，卻仍必需要用「憲法保障言論自由」的尺度來看待這件事情：
+
+
 
 > Cognizant of how its prosecution of Mr. Assange under the Espionage Act could be used to target journalists for their everyday activities, the assistant attorney general who announced the charges against him in 2019 [insisted that Mr. Assange “is no journalist.”](https://twitter.com/ryanjreilly/status/1131663755161591808) **But the Constitution does not define who qualifies as a journalist, nor does it bestow any such power upon the U.S. government**. As the Supreme Court justice Byron White [wrote in a 1973 decision](https://supreme.justia.com/cases/federal/us/408/665/#tab-opinion-1949853), the “**liberty of the press is the right of the lonely pamphleteer who uses carbon paper or a mimeograph just as much as of the large metropolitan publisher who utilizes the latest photocomposition methods**.”
 
@@ -156,8 +157,7 @@ In 1973, two years after the Supreme Court [defended this newspaper’s right t
 
 電報門事件的媒體夥伴們，也曾就此事聯合抨擊阿桑奇，他們認為發佈未經刪剪的資訊，無故讓吹哨者陷於危險，聲明中稱「我們無法為公開為刪減資訊的行為做辯護，這一切都是阿桑奇一人所為」。
 
-
-![](https://prod-files-secure.s3.us-west-2.amazonaws.com/cf435e4b-b057-409f-b155-2521ad96f179/88caa3dc-a4f1-49c1-8503-9a135c986fe2/Untitled.png)
+![](Pasted%20image%2020260127150937.png)
 
 顯然，在一些「媒體人」眼中，阿桑奇已經跨過了作為媒體的道德底線：他把自己當作一個審判者，而不只是簡單的媒體人。
 
@@ -219,8 +219,7 @@ Jacob Appelbaum （另一位美國的網路大神） 在書中提到：網路在
 
 或許西方國家一邊嘲笑中國的「天網」荒謬侵害人權，一邊正舉雙手歡迎自己的國家正以正義為名，做著一模一樣的事情：一場全面的網路監控已經悄然降臨。
 
-
-![Julian Assange, a cypherpunk](https://prod-files-secure.s3.us-west-2.amazonaws.com/cf435e4b-b057-409f-b155-2521ad96f179/c485be3c-4445-4f8e-be6e-06d94533ac78/Untitled.png)
+![](Pasted%20image%2020260127150959.png)
 
 
 ## Julian Assange, a Cypherpunk

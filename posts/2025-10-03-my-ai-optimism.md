@@ -6,7 +6,6 @@ status: "Public"
 type: "Post"
 ---
 
-# AI 雜感 - 做個樂觀主義者 
 
 ### 前言
 
