@@ -1,8 +1,8 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import ReactMarkdown from "react-markdown"
 import styled from "@emotion/styled"
 
-// Preprocess content to handle Obsidian images and YouTube URLs
+// Preprocess content to handle Obsidian images, YouTube URLs, and X/Twitter URLs
 const preprocessMarkdown = (content: string): string => {
   // Convert ![[image.webp]] to ![image](/api/image/image.webp)
   let processed = content.replace(/!\[\[([^\]]+)\]\]/g, (match, filename) => {
@@ -22,6 +22,14 @@ const preprocessMarkdown = (content: string): string => {
   processed = processed.replace(/(?<![\[\(])https:\/\/(?:www\.)?youtu(?:\.be\/|be\.com\/watch\?v=)([a-zA-Z0-9_-]{11})(?![\]\)])/g, 
     (match, videoId) => {
       return `[YouTube Video](https://www.youtube.com/watch?v=${videoId})`;
+    }
+  );
+
+  // Convert bare X/Twitter URLs to markdown links
+  // Match https://twitter.com/user/status/ID and https://x.com/user/status/ID
+  processed = processed.replace(/(?<![\[\(])https:\/\/(?:twitter\.com|x\.com)\/\w+\/status\/(\d+)[^\s)]*(?![\]\)])/g,
+    (match, tweetId) => {
+      return `[Tweet](https://x.com/i/status/${tweetId})`;
     }
   );
 
@@ -45,6 +53,14 @@ const MarkdownRenderer: React.FC<Props> = ({ content }) => {
     if (youtubeMatch) {
       const videoId = youtubeMatch[1];
       return <YouTubeEmbed videoId={videoId} />;
+    }
+
+    // Check if it's an X/Twitter link
+    const tweetMatch = href.match(/(?:twitter\.com|x\.com)\/\w+\/status\/(\d+)/);
+
+    if (tweetMatch) {
+      const tweetId = tweetMatch[1];
+      return <TweetEmbed tweetId={tweetId} />;
     }
     
     return <a href={href}>{children}</a>;
@@ -76,6 +92,38 @@ const YouTubeEmbed: React.FC<{ videoId: string }> = ({ videoId }) => (
     />
   </div>
 );
+
+const TweetEmbed: React.FC<{ tweetId: string }> = ({ tweetId }) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const renderTweet = () => {
+      if (containerRef.current) {
+        containerRef.current.innerHTML = '';
+        (window as any).twttr.widgets.createTweet(tweetId, containerRef.current, {
+          align: 'center',
+          conversation: 'none',
+        });
+      }
+    };
+
+    if ((window as any).twttr?.widgets) {
+      renderTweet();
+    } else {
+      const script = document.createElement('script');
+      script.src = 'https://platform.twitter.com/widgets.js';
+      script.async = true;
+      script.onload = renderTweet;
+      document.body.appendChild(script);
+    }
+  }, [tweetId]);
+
+  return (
+    <div style={{ margin: '2rem 0', display: 'flex', justifyContent: 'center' }}>
+      <div ref={containerRef} style={{ maxWidth: 550, width: '100%' }} />
+    </div>
+  );
+};
 
 export default MarkdownRenderer;
 
