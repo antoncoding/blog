@@ -15,7 +15,7 @@ type: "Post"
 幾年前，他做的專案寫了一篇白皮書，名為「Blackwhole Swap」，在區塊鏈產業界被瘋傳，我印象最深刻的是當時一家知名 VC - Dragonfly 的 Haseeb 當時發文說，這是他近幾個月來看到寫得最好的白皮書，這個項目也取得了一定的成功。
 
 
-![](attachment:54b5de15-f343-4840-992c-908b292ef4b3:image.png)
+[Image placeholder - please add image manually]
 
 項目實質內容在做什麼，我覺得不是那麼重要。但後來我在問陳品對於這篇白皮書得到大量迴響有什麼心得的時候，他跟我講了一席話，看似嘴砲，確實十分精準的話，大概是這麼說：
 
@@ -34,7 +34,7 @@ type: "Post"
 這是一種認知偏誤，指人們會對於自己投入過勞力或心力去創造、理解的事物，賦予不成比例的高評價。這行「需要稍微動腦」的數學公式，正是刻意製造了認知的「沈沒成本」；讀者因為親自付出了腦力去解碼並獲得 Aha-moment，這份由自己參與建構的理解便顯得格外珍貴，進而產生「這篇文章寫得真好」的主觀錯覺。
 
 
-![](attachment:8aeeded4-61c5-4ff3-9334-18b20d09caf5:38f469a4-0a4c-431f-93ec-5e96f8c6ec21.png)
+[Image placeholder - please add image manually]
 
 
 #### **2. 社交貨幣（Social Currency）—— 關於「分享是為了自我形象」**

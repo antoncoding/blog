@@ -68,7 +68,7 @@ type: "Post"
 但一樣是因為聽了蘇格拉底的故事，才讓我有了不同的想法：
 
 
-![](attachment:401ff7b4-9872-419f-b0d9-5d22ca49a153:image.png)
+[Image placeholder - please add image manually]
 
 「出於我無法理解的理由，人們喜歡聽到世界末日來了。」 
 
