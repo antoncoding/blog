@@ -35,7 +35,9 @@ const MarkdownRenderer: React.FC<Props> = ({ content }) => {
 
   return (
     <StyledWrapper>
-      <ReactMarkdown>
+      <ReactMarkdown 
+        allowDangerousHtml={true}
+      >
         {processedContent}
       </ReactMarkdown>
     </StyledWrapper>
@@ -45,18 +47,23 @@ const MarkdownRenderer: React.FC<Props> = ({ content }) => {
 export default MarkdownRenderer;
 
 const StyledWrapper = styled.div`
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   h1 {
     font-size: 2rem;
     margin: 2rem 0 1rem;
     font-weight: 600;
+    letter-spacing: -0.02em;
   }
 
   h2 {
     font-size: 1.5rem;
     margin: 1.5rem 0 1rem;
     font-weight: 500;
+    letter-spacing: -0.01em;
   }
 
   h3 {
@@ -67,10 +74,11 @@ const StyledWrapper = styled.div`
 
   p {
     margin: 1rem 0;
-    line-height: 1.7;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.8;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-weight: 400;
     font-size: 1rem;
+    letter-spacing: 0.3px;
   }
 
   ul, ol {
@@ -158,9 +166,10 @@ const StyledWrapper = styled.div`
 
   /* YouTube iframe styling */
   iframe {
-    margin: 2rem auto;
-    display: block;
+    margin: 2rem auto !important;
+    display: block !important;
     border-radius: 8px;
     max-width: 100%;
+    height: 400px;
   }
 `
