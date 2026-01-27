@@ -2,35 +2,19 @@ import React from "react"
 import ReactMarkdown from "react-markdown"
 import styled from "@emotion/styled"
 
-// Map of old organized images to public/images
-const obsidianImageMap: Record<string, string> = {
-  'yabi.webp': '/images/yabi.webp',
-  'claude.webp': '/images/claude.webp',
-  'ai-scientist.webp': '/images/ai-scientist.webp',
-  'socrates.webp': '/images/socrates.webp',
-  'blackwhole.webp': '/images/blackwhole.webp',
-  'ikea-effect.webp': '/images/ikea-effect.webp',
-  'etf-meme.webp': '/images/etf-meme.webp'
-};
-
 // Preprocess content to handle Obsidian image syntax
 const preprocessMarkdown = (content: string): string => {
-  // Convert ![[image.webp]] to ![image](/attachments/image.webp)
+  // Convert ![[image.webp]] to ![image](/api/image/image.webp)
   let processed = content.replace(/!\[\[([^\]]+)\]\]/g, (match, filename) => {
-    // Check if it's in the old map first
-    const mappedPath = obsidianImageMap[filename];
-    
-    // Otherwise assume it's in public/attachments
-    const imagePath = mappedPath || `/attachments/${filename}`;
     const caption = filename.replace(/\.[^.]+$/, '');
-    
-    return `![${caption}](${imagePath})`;
+    return `![${caption}](/api/image/${filename})`;
   });
 
   // Also handle relative paths from Obsidian markdown syntax
-  // Convert ![](image.webp) to ![image](/attachments/image.webp)
+  // Convert ![](image.webp) to ![image](/api/image/image.webp)
   processed = processed.replace(/!\[\]\(([^/)]+\.(?:webp|png|jpg|jpeg|gif))\)/g, (match, filename) => {
-    return `![${filename.replace(/\.[^.]+$/, '')}](/public/attachments/${filename})`;
+    const caption = filename.replace(/\.[^.]+$/, '');
+    return `![${caption}](/api/image/${filename})`;
   });
 
   return processed;
