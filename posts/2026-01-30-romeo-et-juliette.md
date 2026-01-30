@@ -32,7 +32,7 @@ type: Post
 
 這次看表演也覺得真的又看到了許多不一樣的東西。除了主軸的愛情線以外，我覺得好多首神父的歌都是以前會想要跳過，但是這次聽到覺得最「中」的。其中這首「絕望二重唱」，Duo De Desespoir，就是這次覺得最中的歌之一。
 
-https://www.youtube.com/watch?v=_aKgsu0eKZU&list=PL56CCEF1F36C7B3D9&index=22
+https://www.youtube.com/watch?v=_aKgsu0eKZU
 
 其中一段的歌詞是：
 
