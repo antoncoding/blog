@@ -4,7 +4,7 @@ date: 2026-01-30
 tags:
   - chinese
   - life
-status: Private
+status: Public
 type: Post
 ---
 去年八月底，應好友 Maylee 的邀約一起買了今天羅密歐與茱麗葉音樂劇的門票。轉眼之間五個月過了，算是人生改變挺大的五個月，今天晚上終於完成了小時候的心願之一。
