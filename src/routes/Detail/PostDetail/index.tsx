@@ -1,7 +1,6 @@
 import React from "react"
 import PostHeader from "./PostHeader"
 import Footer from "./PostFooter"
-import CommentBox from "./CommentBox"
 import styled from "@emotion/styled"
 import NotionRenderer from "../components/NotionRenderer"
 import MarkdownRenderer from "src/components/MarkdownRenderer"
@@ -27,12 +26,7 @@ const PostDetail: React.FC<Props> = () => {
             <NotionRenderer recordMap={data.recordMap} />
           )}
         </div>
-        {data.type[0] === "Post" && (
-          <>
-            <Footer />
-            <CommentBox data={data} />
-          </>
-        )}
+        {data.type[0] === "Post" && <Footer />}
       </article>
     </StyledWrapper>
   )
