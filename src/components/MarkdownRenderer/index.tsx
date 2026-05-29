@@ -37,6 +37,18 @@ const preprocessMarkdown = (content: string): string => {
   return processed;
 };
 
+const getTextContent = (children: React.ReactNode): string => {
+  if (typeof children === "string" || typeof children === "number") {
+    return String(children)
+  }
+
+  if (Array.isArray(children)) {
+    return children.map(getTextContent).join("")
+  }
+
+  return ""
+}
+
 type Props = {
   content: string
 }
@@ -51,14 +63,15 @@ const MarkdownRenderer: React.FC<Props> = ({ content }) => {
     // Check if it's a YouTube link
     const youtubeMatch = href.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
     
-    if (youtubeMatch) {
+    const childText = getTextContent(children);
+
+    if (youtubeMatch && childText === 'YouTube Video') {
       const videoId = youtubeMatch[1];
       return <YouTubeEmbed videoId={videoId} />;
     }
 
     // Check if it's an X/Twitter embed (only for auto-generated links from bare URLs)
     const tweetMatch = href.match(/(?:twitter\.com|x\.com)\/\w+\/status\/(\d+)/);
-    const childText = typeof children === 'string' ? children : Array.isArray(children) ? children[0] : '';
 
     if (tweetMatch && childText === 'Tweet') {
       const tweetId = tweetMatch[1];
