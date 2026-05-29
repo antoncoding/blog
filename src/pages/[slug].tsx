@@ -23,7 +23,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths: filteredPost.map((row) => `/${row.slug}`),
-    fallback: true,
+    fallback: "blocking",
   }
 }
 
@@ -36,7 +36,18 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   const detailPosts = filterPosts(posts, filter)
   const postDetail = detailPosts.find((t: any) => t.slug === slug)
-  const recordMap = await getRecordMap(postDetail?.id!)
+
+  if (!postDetail) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+      revalidate: CONFIG.revalidateTime,
+    }
+  }
+
+  const recordMap = await getRecordMap(postDetail.id)
 
   await queryClient.prefetchQuery(queryKey.post(`${slug}`), () => ({
     ...postDetail,
